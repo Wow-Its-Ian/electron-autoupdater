@@ -1,13 +1,18 @@
 {
 	"name": "auto-update-electron",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A Basic Autoupdating Electron App",
 	"main": "main.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"watch": "nodemon --exec electron",
 		"start": "electron .",
 		"dist": "electron-builder"
+	},
+	"repository": "https://github.com/Wow-Its-Ian/electron-autoupdater",
+	"publish": {
+		"provider": "github",
+		"releaseType": "release"
 	},
 	"build": {
 		"appId": "com.brandgage.autoupdater",
@@ -23,9 +28,11 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"electron": "^26.2.2",
-		"electron-builder": "^24.6.4",
 		"electron-updater": "^6.1.4",
 		"nodemon": "^3.0.1"
+	},
+	"devDependencies": {
+		"electron": "^26.2.2",
+		"electron-builder": "^24.6.4"
 	}
 }
